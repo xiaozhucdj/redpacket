@@ -89,7 +89,7 @@ public class RedPacketDialog extends Dialog implements View.OnClickListener {
                     public void run() {
                         onRedPacketOpen(true,2,"");
                     }
-                },3000);
+                },1500);
 //                openRedPacket();
 
                 break;
