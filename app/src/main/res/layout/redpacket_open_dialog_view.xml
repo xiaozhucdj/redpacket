@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/redpacket_rootview"
+    android:layout_width="290dp"
+    android:layout_height="380dp">
+    <!--android:background="@drawable/redpocket_open_dialog_bg"-->
+    <TextView
+        android:id="@+id/rob_money_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="214dp"
+        android:text="19金币"
+        android:textColor="#ff4444"
+        android:textSize="50sp"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/open_redpacket_top"
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:background="@drawable/redpocket_open_top"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/redpacket_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/redpocket_skin_bottom" />
+
+    <View
+        android:id="@+id/redpacket_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/redpocket_skin_top" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/close_bt"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/redpocket_close_bt" />
+
+        <ImageView
+            android:id="@+id/sender_head_view"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/sender_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:maxLines="1"
+            android:text="尼古拉斯赵四"
+            android:textColor="#fff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/sender_wish_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="53dp"
+            android:maxLines="1"
+            android:text="恭喜发财 大吉大利"
+            android:textColor="#fee0b3"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/open_bt"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="60dp"
+            android:src="@drawable/redpocket_open_bt" />
+    </LinearLayout>
+</FrameLayout>
