@@ -11,4 +11,12 @@
         android:onClick="onClick"
         android:text="飞机礼物" />
 
+    <Button
+        android:id="@+id/bt_kiss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bt_plane"
+        android:onClick="onClick"
+        android:text="飞吻礼物" />
+
 </RelativeLayout>

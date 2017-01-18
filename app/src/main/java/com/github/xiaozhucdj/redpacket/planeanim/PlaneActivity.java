@@ -10,6 +10,7 @@ import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 
 import com.github.xiaozhucdj.redpacket.R;
+import com.github.xiaozhucdj.redpacket.kissanim.MultiFlyKissView;
 
 /**
  * Created by chudaijiang on 2017/1/11 16:42
@@ -32,6 +33,9 @@ public class PlaneActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.bt_plane:
                 startPlaneAnim();
+                break;
+            case R.id.bt_kiss:
+                startFlyKissAnim();
                 break;
             default:
                 break;
@@ -75,6 +79,44 @@ public class PlaneActivity extends AppCompatActivity {
             }
         });
         mPlaneAnimView.startAnim();
+    }
+
+    private MultiFlyKissView mFlyKissView;
+    /**
+     * 展示飞吻动效
+     */
+    public void startFlyKissAnim(){
+        if (mFlyKissView != null) {
+            mFlyKissView.cancel();
+            planeRl.removeView(mFlyKissView);
+        }
+        mFlyKissView = new MultiFlyKissView(this);
+        mFlyKissView.setLayoutParams(new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT));
+        planeRl.addView(mFlyKissView);
+        mFlyKissView.setFlyKissAdminEndLisener(new MultiFlyKissView.KissAdminEndListener() {
+            @Override
+            public void onAnimStart(Animator animation) {
+
+            }
+
+            @Override
+            public void onAnimEnd(Animator animation) {
+                if (mFlyKissView != null) {
+                    planeRl.removeView(mFlyKissView);
+                }
+                /*if (mAnimEndListener != null) {
+                    mAnimEndListener.animEnd();
+                }*/
+            }
+
+            @Override
+            public void onAnimCancel(Animator animation) {
+                if (mFlyKissView != null) {
+                    planeRl.removeView(mFlyKissView);
+                }
+            }
+        });
+        mFlyKissView.startAnim();
     }
 
 }
